@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F1B2D8E1D69458E0061A815 /* SerialThread.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B2D8C1D69458E0061A815 /* SerialThread.c */; };
+		9FA770881D5C3A71006DCDCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA770871D5C3A71006DCDCA /* AppDelegate.m */; };
+		9FA7708B1D5C3A71006DCDCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7708A1D5C3A71006DCDCA /* main.m */; };
+		9FA7708D1D5C3A71006DCDCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA7708C1D5C3A71006DCDCA /* Assets.xcassets */; };
+		9FA770901D5C3A71006DCDCA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA7708E1D5C3A71006DCDCA /* MainMenu.xib */; };
+		9FA7709C1D5C4015006DCDCA /* volume-control-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA7709B1D5C4015006DCDCA /* volume-control-16.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9F1B2D8C1D69458E0061A815 /* SerialThread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SerialThread.c; sourceTree = "<group>"; };
+		9F1B2D8D1D69458E0061A815 /* SerialThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialThread.h; sourceTree = "<group>"; };
+		9FA770831D5C3A71006DCDCA /* SerialDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerialDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA770861D5C3A71006DCDCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9FA770871D5C3A71006DCDCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9FA7708A1D5C3A71006DCDCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9FA7708C1D5C3A71006DCDCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FA7708F1D5C3A71006DCDCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9FA770911D5C3A71006DCDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FA7709B1D5C4015006DCDCA /* volume-control-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-control-16.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FA770801D5C3A71006DCDCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FA7707A1D5C3A71006DCDCA = {
+			isa = PBXGroup;
+			children = (
+				9FA770851D5C3A71006DCDCA /* SerialDriver */,
+				9FA770841D5C3A71006DCDCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FA770841D5C3A71006DCDCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FA770831D5C3A71006DCDCA /* SerialDriver.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FA770851D5C3A71006DCDCA /* SerialDriver */ = {
+			isa = PBXGroup;
+			children = (
+				9FA7709B1D5C4015006DCDCA /* volume-control-16.png */,
+				9FA770861D5C3A71006DCDCA /* AppDelegate.h */,
+				9FA770871D5C3A71006DCDCA /* AppDelegate.m */,
+				9F1B2D8C1D69458E0061A815 /* SerialThread.c */,
+				9F1B2D8D1D69458E0061A815 /* SerialThread.h */,
+				9FA7708C1D5C3A71006DCDCA /* Assets.xcassets */,
+				9FA7708E1D5C3A71006DCDCA /* MainMenu.xib */,
+				9FA770911D5C3A71006DCDCA /* Info.plist */,
+				9FA770891D5C3A71006DCDCA /* Supporting Files */,
+			);
+			path = SerialDriver;
+			sourceTree = "<group>";
+		};
+		9FA770891D5C3A71006DCDCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FA7708A1D5C3A71006DCDCA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FA770821D5C3A71006DCDCA /* SerialDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FA770941D5C3A71006DCDCA /* Build configuration list for PBXNativeTarget "SerialDriver" */;
+			buildPhases = (
+				9FA7707F1D5C3A71006DCDCA /* Sources */,
+				9FA770801D5C3A71006DCDCA /* Frameworks */,
+				9FA770811D5C3A71006DCDCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SerialDriver;
+			productName = SerialDriver;
+			productReference = 9FA770831D5C3A71006DCDCA /* SerialDriver.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FA7707B1D5C3A71006DCDCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Mikhail Naganov";
+				TargetAttributes = {
+					9FA770821D5C3A71006DCDCA = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 9FA7707E1D5C3A71006DCDCA /* Build configuration list for PBXProject "SerialDriver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FA7707A1D5C3A71006DCDCA;
+			productRefGroup = 9FA770841D5C3A71006DCDCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FA770821D5C3A71006DCDCA /* SerialDriver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FA770811D5C3A71006DCDCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FA7709C1D5C4015006DCDCA /* volume-control-16.png in Resources */,
+				9FA7708D1D5C3A71006DCDCA /* Assets.xcassets in Resources */,
+				9FA770901D5C3A71006DCDCA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FA7707F1D5C3A71006DCDCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FA7708B1D5C3A71006DCDCA /* main.m in Sources */,
+				9FA770881D5C3A71006DCDCA /* AppDelegate.m in Sources */,
+				9F1B2D8E1D69458E0061A815 /* SerialThread.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9FA7708E1D5C3A71006DCDCA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FA7708F1D5C3A71006DCDCA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FA770921D5C3A71006DCDCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9FA770931D5C3A71006DCDCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9FA770951D5C3A71006DCDCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SerialDriver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Home.SerialDriver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9FA770961D5C3A71006DCDCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SerialDriver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Home.SerialDriver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FA7707E1D5C3A71006DCDCA /* Build configuration list for PBXProject "SerialDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA770921D5C3A71006DCDCA /* Debug */,
+				9FA770931D5C3A71006DCDCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FA770941D5C3A71006DCDCA /* Build configuration list for PBXNativeTarget "SerialDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA770951D5C3A71006DCDCA /* Debug */,
+				9FA770961D5C3A71006DCDCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FA7707B1D5C3A71006DCDCA /* Project object */;
+}
