@@ -12,6 +12,7 @@
 #include <fcntl.h>
 #include <poll.h>
 #include <stdbool.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/ioctl.h>
@@ -61,6 +62,7 @@ const char PING = 'A';
 const char VOLUP[6] = "UUUUUU";
 const char VOLDOWN[6] = "DDDDDD";
 
+const char *PIPE_PATH = "/tmp/SerialDriverPipe";
 const char PIPE_QUIT = 'Q';
 const char PIPE_START_PING = 'P';
 const char PIPE_STOP_PING = 'p';
@@ -88,16 +90,17 @@ int init_serial_thread(serial_thread_handle_t *pHandle) {
     serial->pipeWrite = -1;
     *pHandle = (serial_thread_handle_t)serial;
     
-    int pipefd[2];
-    if (pipe(pipefd) == -1) BAILOUT("create pipe");
-    serial->pipeRead = pipefd[0];
-    serial->pipeWrite = pipefd[1];
+    (void)remove(PIPE_PATH);
+    if (mkfifo(PIPE_PATH, DEFFILEMODE) == -1) BAILOUT("create fifo");
     
     pthread_attr_t attr;
     if (pthread_attr_init(&attr) == -1) BAILOUT("attr_init");
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
     if (pthread_create(&serial->thread, &attr, &thread_main, serial) == -1) BAILOUT("create");
     serial->threadCreated = true;
+
+    // Blocks until the threads opens the pipe for reading.
+    serial->pipeWrite = open(PIPE_PATH, O_WRONLY);
     
     syslog(LOG_INFO, "created thread");
     return 0;
@@ -118,12 +121,11 @@ int shutdown_serial(serial_thread_handle_t self) {
             void *result;
             pthread_join(serial->thread, &result);
         }
-        close(serial->pipeRead);
         close(serial->pipeWrite);
-        serial->pipeRead = -1;
         serial->pipeWrite = -1;
         serial->threadCreated = false;
     }
+    (void)remove(PIPE_PATH);
     free(serial);
 
     closelog();
@@ -197,6 +199,7 @@ void* thread_main(void *self) {
     serial_thread_data_impl_t *serial = (serial_thread_data_impl_t*)self;
     
     syslog(LOG_DEBUG, "thread: started");
+    serial->pipeRead = open(PIPE_PATH, O_RDONLY);
     bool run = true;
     while (run) {
         try_open_serial(self);
@@ -240,6 +243,8 @@ void* thread_main(void *self) {
         }
     }
     close_serial(self);
+    close(serial->pipeRead);
+    serial->pipeRead = -1;
     syslog(LOG_DEBUG, "thread: exit");
     return NULL;
 }
