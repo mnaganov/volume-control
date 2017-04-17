@@ -27,8 +27,8 @@
 int start_ping(serial_thread_handle_t self,
                ping_callback_t callback, void *context);
 int stop_ping(serial_thread_handle_t self);
-int volume_up(serial_thread_handle_t self);
-int volume_down(serial_thread_handle_t self);
+int volume_up(serial_thread_handle_t self, bool precise);
+int volume_down(serial_thread_handle_t self, bool precise);
 int shutdown_serial(serial_thread_handle_t self);
 
 const struct serial_thread_data_s gSerialInterface = {
@@ -60,14 +60,18 @@ typedef struct serial_thread_data_impl_s {
 const char *SERIAL_PATH = "/dev/tty.usbserial-AH015UG3";
 const char PING = 'A';
 const char VOLUP[6] = "UUUUUU";
+const char VOLUPPREC[1] = "U";
 const char VOLDOWN[6] = "DDDDDD";
+const char VOLDOWNPREC[1] = "D";
 
 const char *PIPE_PATH = "/tmp/SerialDriverPipe";
 const char PIPE_QUIT = 'Q';
 const char PIPE_START_PING = 'P';
 const char PIPE_STOP_PING = 'p';
 const char PIPE_VOL_UP = 'U';
+const char PIPE_VOL_UP_PRECISE = 'u';
 const char PIPE_VOL_DOWN = 'D';
+const char PIPE_VOL_DOWN_PRECISE = 'd';
 
 void* thread_main(void *self);
 
@@ -162,12 +166,12 @@ int stop_ping(serial_thread_handle_t self) {
     return write_command(self, "stop_ping", PIPE_STOP_PING);
 }
 
-int volume_up(serial_thread_handle_t self) {
-    return write_command(self, "volume_up", PIPE_VOL_UP);
+int volume_up(serial_thread_handle_t self, bool precise) {
+    return write_command(self, "volume_up", precise ? PIPE_VOL_UP_PRECISE : PIPE_VOL_UP);
 }
 
-int volume_down(serial_thread_handle_t self) {
-    return write_command(self, "volume_down", PIPE_VOL_DOWN);
+int volume_down(serial_thread_handle_t self, bool precise) {
+    return write_command(self, "volume_down", precise ? PIPE_VOL_DOWN_PRECISE : PIPE_VOL_DOWN);
 }
 
 int write_command(serial_thread_handle_t self, const char* func_name, char cmd) {
@@ -238,6 +242,12 @@ void* thread_main(void *self) {
                     case PIPE_VOL_DOWN:
                         send_command(self, "vol_down", VOLDOWN, sizeof(VOLDOWN), 15);
                         break;
+                    case PIPE_VOL_UP_PRECISE:
+                        send_command(self, "vol_up_prec", VOLUPPREC, sizeof(VOLUPPREC), 15);
+                        break;
+                    case PIPE_VOL_DOWN_PRECISE:
+                        send_command(self, "vol_down_prec", VOLDOWNPREC, sizeof(VOLDOWNPREC), 15);
+                    break;
                 }
             }
         }

@@ -15,7 +15,9 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (strong, nonatomic) NSMenuItem *deviceStatusMenuItem;
 @property (strong, nonatomic) NSMenuItem *volumeUpMenuItem;
+@property (strong, nonatomic) NSMenuItem *volumeUpPreciseMenuItem;
 @property (strong, nonatomic) NSMenuItem *volumeDownMenuItem;
+@property (strong, nonatomic) NSMenuItem *volumeDownPreciseMenuItem;
 @property (strong, nonatomic) NSMenu *statusMenu;
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property serial_thread_handle_t serial;
@@ -53,12 +55,22 @@ void pingFinished(void *context, int result) {
     [[NSMenuItem alloc] initWithTitle:@"Volume Up" action:@selector(volumeUp:) keyEquivalent:@""];
     [_statusMenu addItem:_volumeUpMenuItem];
     [_volumeUpMenuItem setEnabled:FALSE];
+    
+    self.volumeUpPreciseMenuItem =
+    [[NSMenuItem alloc] initWithTitle:@"Volume Up (Precise)" action:@selector(volumeUpPrecise:) keyEquivalent:@""];
+    [_statusMenu addItem:_volumeUpPreciseMenuItem];
+    [_volumeUpMenuItem setEnabled:FALSE];
 
     self.volumeDownMenuItem =
     [[NSMenuItem alloc] initWithTitle:@"Volume Down" action:@selector(volumeDown:) keyEquivalent:@""];
     [_statusMenu addItem:_volumeDownMenuItem];
     [_volumeDownMenuItem setEnabled:FALSE];
-
+    
+    self.volumeDownPreciseMenuItem =
+    [[NSMenuItem alloc] initWithTitle:@"Volume Down (Precise)" action:@selector(volumeDownPrecise:) keyEquivalent:@""];
+    [_statusMenu addItem:_volumeDownPreciseMenuItem];
+    [_volumeDownMenuItem setEnabled:FALSE];
+    
     [_statusMenu addItem:[NSMenuItem separatorItem]];
     [_statusMenu addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
 
@@ -85,16 +97,25 @@ void pingFinished(void *context, int result) {
     }
     [_volumeUpMenuItem setEnabled:enableControls];
     [_volumeDownMenuItem setEnabled:enableControls];
+    [_volumeUpPreciseMenuItem setEnabled:enableControls];
+    [_volumeDownPreciseMenuItem setEnabled:enableControls];
 }
 
 - (void)volumeUp:(NSObject*)unused {
-    if (_serial != NULL) (*_serial)->volume_up(_serial);
+    if (_serial != NULL) (*_serial)->volume_up(_serial, false);
 }
 
 - (void)volumeDown:(NSObject*)unused {
-    if (_serial != NULL) (*_serial)->volume_down(_serial);
+    if (_serial != NULL) (*_serial)->volume_down(_serial, false);
 }
 
+- (void)volumeUpPrecise:(NSObject*)unused {
+    if (_serial != NULL) (*_serial)->volume_up(_serial, true);
+}
+
+- (void)volumeDownPrecise:(NSObject*)unused {
+    if (_serial != NULL) (*_serial)->volume_down(_serial, true);
+}
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     if (_serial != NULL) (*_serial)->shutdown(_serial);
     _serial = NULL;

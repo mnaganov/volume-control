@@ -25,8 +25,8 @@ struct serial_thread_data_s {
     int (*start_ping)(serial_thread_handle_t self,
                       ping_callback_t callback, void *context);
     int (*stop_ping)(serial_thread_handle_t self);
-    int (*volume_up)(serial_thread_handle_t self);
-    int (*volume_down)(serial_thread_handle_t self);
+    int (*volume_up)(serial_thread_handle_t self, bool precise);
+    int (*volume_down)(serial_thread_handle_t self, bool precise);
     int (*shutdown)(serial_thread_handle_t self);
 };
 
