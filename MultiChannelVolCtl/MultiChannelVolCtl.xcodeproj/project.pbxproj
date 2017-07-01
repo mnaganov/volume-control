@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7445AB711F04B30E004AEEB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7445AB701F04B30E004AEEB0 /* AppDelegate.m */; };
+		7445AB741F04B30E004AEEB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7445AB731F04B30E004AEEB0 /* main.m */; };
+		7445AB761F04B30E004AEEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7445AB751F04B30E004AEEB0 /* Assets.xcassets */; };
+		7445AB791F04B30E004AEEB0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7445AB771F04B30E004AEEB0 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7445AB6C1F04B30E004AEEB0 /* MultiChannelVolCtl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiChannelVolCtl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7445AB6F1F04B30E004AEEB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7445AB701F04B30E004AEEB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7445AB731F04B30E004AEEB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7445AB751F04B30E004AEEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7445AB781F04B30E004AEEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7445AB7A1F04B30E004AEEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7445AB691F04B30E004AEEB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7445AB631F04B30E004AEEB0 = {
+			isa = PBXGroup;
+			children = (
+				7445AB6E1F04B30E004AEEB0 /* MultiChannelVolCtl */,
+				7445AB6D1F04B30E004AEEB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7445AB6D1F04B30E004AEEB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7445AB6C1F04B30E004AEEB0 /* MultiChannelVolCtl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7445AB6E1F04B30E004AEEB0 /* MultiChannelVolCtl */ = {
+			isa = PBXGroup;
+			children = (
+				7445AB6F1F04B30E004AEEB0 /* AppDelegate.h */,
+				7445AB701F04B30E004AEEB0 /* AppDelegate.m */,
+				7445AB751F04B30E004AEEB0 /* Assets.xcassets */,
+				7445AB771F04B30E004AEEB0 /* MainMenu.xib */,
+				7445AB7A1F04B30E004AEEB0 /* Info.plist */,
+				7445AB721F04B30E004AEEB0 /* Supporting Files */,
+			);
+			path = MultiChannelVolCtl;
+			sourceTree = "<group>";
+		};
+		7445AB721F04B30E004AEEB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7445AB731F04B30E004AEEB0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7445AB6B1F04B30E004AEEB0 /* MultiChannelVolCtl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7445AB7D1F04B30E004AEEB0 /* Build configuration list for PBXNativeTarget "MultiChannelVolCtl" */;
+			buildPhases = (
+				7445AB681F04B30E004AEEB0 /* Sources */,
+				7445AB691F04B30E004AEEB0 /* Frameworks */,
+				7445AB6A1F04B30E004AEEB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiChannelVolCtl;
+			productName = MultiChannelVolCtl;
+			productReference = 7445AB6C1F04B30E004AEEB0 /* MultiChannelVolCtl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7445AB641F04B30E004AEEB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Mikhail Naganov";
+				TargetAttributes = {
+					7445AB6B1F04B30E004AEEB0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 7445AB671F04B30E004AEEB0 /* Build configuration list for PBXProject "MultiChannelVolCtl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7445AB631F04B30E004AEEB0;
+			productRefGroup = 7445AB6D1F04B30E004AEEB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7445AB6B1F04B30E004AEEB0 /* MultiChannelVolCtl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7445AB6A1F04B30E004AEEB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7445AB761F04B30E004AEEB0 /* Assets.xcassets in Resources */,
+				7445AB791F04B30E004AEEB0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7445AB681F04B30E004AEEB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7445AB741F04B30E004AEEB0 /* main.m in Sources */,
+				7445AB711F04B30E004AEEB0 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7445AB771F04B30E004AEEB0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7445AB781F04B30E004AEEB0 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7445AB7B1F04B30E004AEEB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7445AB7C1F04B30E004AEEB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7445AB7E1F04B30E004AEEB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MultiChannelVolCtl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.naganov.MultiChannelVolCtl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7445AB7F1F04B30E004AEEB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MultiChannelVolCtl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.naganov.MultiChannelVolCtl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7445AB671F04B30E004AEEB0 /* Build configuration list for PBXProject "MultiChannelVolCtl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7445AB7B1F04B30E004AEEB0 /* Debug */,
+				7445AB7C1F04B30E004AEEB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7445AB7D1F04B30E004AEEB0 /* Build configuration list for PBXNativeTarget "MultiChannelVolCtl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7445AB7E1F04B30E004AEEB0 /* Debug */,
+				7445AB7F1F04B30E004AEEB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7445AB641F04B30E004AEEB0 /* Project object */;
+}
